@@ -109,25 +109,26 @@ This is a Django-based web application that allows users to take quizzes. The ap
 ```
 quiz-app/
 │
-├── quiz_project/                 # Main project directory
+├── core/                 # Main project directory
 │   ├── settings.py               # Django project settings
 │   ├── urls.py                   # URL routing
 │   ├── wsgi.py                   # WSGI config for production
 │   └── asgi.py                   # ASGI config
 │
-├── quiz_app/                     # Quiz app directory
+├── sim/                          # Quiz app directory
 │   ├── migrations/               # Database migrations
 │   ├── models.py                 # Database models (Quiz, Question, Answer)
 │   ├── views.py                  # View functions handling the quiz logic
 │   ├── urls.py                   # URL routing for quiz-related views
+│   ├── start.html                # Display the starting page of the quizz app
 │   ├── templates/                # HTML templates for quiz app
 │   │   ├── question.html         # Display questions and options
 │   │   ├── answer.html           # Display answer feedback
 │   │   └── finish.html           # Display final score
-│   ├── static/                   # Static files (CSS, JavaScript)
-│   ├── forms.py                  # Forms for handling user input (optional)
-│   └── admin.py                  # Admin panel configuration
 │
+├── db.sqlite3                    #The database file
+├── quiz_data.yaml                # Yaml file which contains all the          
+                                     questions and their answers
 ├── manage.py                     # Django management script
 ├── requirements.txt              # Python dependencies
 └── README.md                     # Project documentation
